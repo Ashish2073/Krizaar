@@ -1,10 +1,37 @@
-GET http://localhost:3000/
+GET http://localhost:5000/
 
 ###login
-POST  http://localhost:3000/auth/login
+POST  http://localhost:5000/auth/login
 
 ### Register
-POST http://localhost:3000/auth/register
+POST http://localhost:5000/auth/register
+Content-Type:application/json
+
+{
+   "user":{
+    "first_name":"",
+    "last_name":"Singh",
+    "email":"yourstruly787@gmail.com",
+    "password":"12345678",
+    "phone_number":"9077342512",
+    "dob": "1990-05-15"     
+    },
+    "address":{
+        "deliverd_person_full_name":"Ashok Kumar",
+        "deliverd_person_phone_number":"8954781223",
+        "country":"India",
+        "state":"Uttar Pradesh",
+        "city":"Renukkot",
+        "landmark":"Hindalco Industries",
+        "pin_code":"231217",
+        "address_type":"Home"
+
+
+    }
+
+
+
+}
 
 ### fresh token reqs
 POST http://localhost:3000/auth/refresh-token 

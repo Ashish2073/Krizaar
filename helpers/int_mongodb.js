@@ -1,5 +1,10 @@
 const mongoose=require('mongoose');
-mongoose.connect('mongodb://localhost:27017/krizaar').then(()=>{
+require('dotenv').config();
+ mongoose.connect(process.env.MONGODB_URI,{
+    dbName:process.env.DB_NAME,
+
+  
+}).then(()=>{
     console.log('database connected');
 })
 .catch(error=>console.log(error.message));
@@ -20,4 +25,5 @@ mongoose.connection.on('disconnected',()=>{
 process.on('SIGINT',async()=>{
     await mongoose.connection.close();
     process.exit(0);
-})
+});
+
