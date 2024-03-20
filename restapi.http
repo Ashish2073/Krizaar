@@ -9,9 +9,9 @@ Content-Type:application/json
 
 {
    "user":{
-    "first_name":"",
+    "first_name":"Ashsih",
     "last_name":"Singh",
-    "email":"yourstruly787@gmail.com",
+    "email":"rr000000123@gmail.com",
     "password":"12345678",
     "phone_number":"9077342512",
     "dob": "1990-05-15"     

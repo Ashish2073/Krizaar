@@ -1,8 +1,9 @@
 const express =require('express');
 const router=express.Router();
-router.post('/register',async(req,res,next)=>{
-    res.send("register route");
-})
+const {AddUser} = require("../controller/users.controller");
+const { validateUserData } = require('../validation/userregistration.validation');
+const createError=require('http-errors');
+router.post('/register',validateUserData,AddUser)
 
 router.post('/login',async(req,res,next)=>{
     res.send("login route");
